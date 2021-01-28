@@ -1,0 +1,137 @@
+<!-- Celebrado, Queenie Marie M.
+BSIT 3-2
+Registration/Health Declaration -->
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js" type="text/javascript"></script>
+	<script src="https://f001.backblazeb2.com/file/buonzz-assets/jquery.ph-locations-v1.0.0.js"></script>
+	<link rel="stylesheet" type="text/css" href="reg-health.css">
+	<title>Registration/Health Declaration</title>
+</head>
+<body>
+	<header>
+		<h1 class="title">REGISTRATION FORM</h1>
+	</header>
+
+	<div class="container">
+		<form id="reg-form" method="post" action="health-declaration.html" >
+			<div class="input-form">
+			<div class="first-row">
+				<label for="fName">First Name: <input id="fname" type="text" name="fname" required></label>
+				<label for="mName">Middle Name: <input id="mname" type="text" name="mname" required></label>
+				<label for="lName">Last Name: <input id="lname" type="text" name="lname" required></label>
+			</div>
+			<div class="second-row">
+				<label>Address(unit, street, subdivision, etc): <input id="address_num" type="text" name="address_num" required></label>
+			</div>
+			<div class="third-row">
+				<label for="region">Region: 
+					<select id="region" required></select>
+				</label>
+
+				<label for="province">Province: 
+					<select id="province" required></select>
+				</label>
+				
+				<label for="city">City:  
+					<select id="city" required></select>
+				</label>
+
+				<label for="brgy">Barangay: 
+					<select id="brgy" required></select>
+				</label>				
+			</div>
+			<div class="fourth-row">
+				<label>Postal code: <input id="postal-code" type="number" name="postal-code" required></label>
+				<label>Contact Number: <input id="contact-num" type="number" name="contact-num" required></label>
+			</div>
+			<div class="fifth-row">
+				<label for="userName">Username: <input id="username" type="text" name="username" required ></label>
+				<label>Email: <input id="fname" type="email" name="fname" required></label>
+			</div>
+			<div class="select-gender">
+			Gender: <input id="female" type="radio" name="gender"> Female
+					<input id="male" type="radio" name="gender"> Male
+			</div>
+			<div class="sixth-row">
+				<label for="DoB">Date of Birth: <input id="dob" type="date" name="dob"></label>
+				<label for="PoB">Place of Birth: <input id="pob" type="text" name="pob"></label>
+			</div>
+			<div class="seventh-row">
+			<label>Nationality: <input id="nationality" type="text" name="nationality"></label>
+			<label for="civStats">Civil Status: <select id="civilStat" name="civilStat"><
+					<option value="M">Married</option>
+					<option value="S">Single</option>
+					<option value="D">Divorced</option>
+					<option value="W">Widowed</option>
+				</select></label>
+			</div>
+			<div class="eighth-row">
+				<label for="mom">Mother's Maiden Name: <input id="mother" type="text" name="mother"></label>
+			</div>
+			<div class="ninth-row">
+				<label for="employStats">Employment Status: <select id="empStat" name="empStat">
+						<option value="1">Employed</option>
+						<option value="2">Consultant</option>
+						<option value="3">Self employed with own Business</option>
+						<option value="4">Self employed as online freelance</option>
+					</select></label>
+			</div>
+			<div class="tenth-row">		
+				<label for="empComp">Employer/Company: <input id="employer" type="text" name="employer"></label>
+			</div>	
+			<div class="eleventh-row">
+				<label for="sof">Source of Funds: <select id="sourceFunds" name="sourceFunds">
+						<option value="1">Allowance</option>
+						<option value="2">Business Profit</option>
+						<option value="3">Commissions</option>
+						<option value="4">Inheritance</option>
+						<option value="5">Loan</option>
+					</select></label>
+			</div>
+				<button id="submitBtn" type="submit" onclick="passValue();">SUBMIT</button>
+		</form>
+	</div>
+
+	<script type="text/javascript">
+
+		function passValue(){
+			var user = document.getElementById('username').value;
+			localStorage.setItem("textvalue", user);
+			return false;
+		}
+
+		var filter ={
+
+			filterBarangay: function(){
+				var city_code  = $(this).val();
+				$('#brgy').ph_locations('fetch_list', [{"city_code": city_code }]);
+			},
+
+			filterCity: function(){
+				var province_code  = $(this).val();
+				$('#city').ph_locations('fetch_list', [{"province_code": province_code }]);
+			},
+
+			filterProvince: function(){
+				var region_code = $(this).val();
+				$('#province').ph_locations('fetch_list', [{"region_code": region_code}]);
+			}	
+		};
+
+		$(function(){
+			$('#region').on('change', filter.filterProvince);
+			$('#province').on('change', filter.filterCity);
+			$('#city').on('change', filter.filterBarangay);
+
+			$('#region').ph_locations({'location_type': 'regions'});
+			$('#province').ph_locations({'location_type': 'provinces'});
+			$('#city').ph_locations({'location_type': 'cities'});
+			$('#brgy').ph_locations({'location_type': 'barangays'});
+
+			$('#region').ph_locations('fetch_list');
+		});
+	</script>
+</body>
+</html>

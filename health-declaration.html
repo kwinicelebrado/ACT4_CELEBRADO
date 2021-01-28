@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 	<script type="text/javascript" src="qr-code.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="healthDeclare.css">
+	<title>Health Declaration</title>
+</head>
+<body>
+	<header>
+		<h1 class="title">HEALTH DECLARATION FORM</h1>
+	</header>
+
+	<div class="container">
+		<div class="contents">
+		<form method="post" action="qrCode.html">
+		<ol>
+			<li>Are you experiencing (nakakaranas ka ba ng):</li>
+				<ol>
+					<li>Sore throat (pananakit ng lalamunan)</li>
+						<input id="yes1" type="radio" name="choice1"> Yes
+						<input id="no1" type="radio" name="choice1"> No<br>
+					<li>Body pains (pananakit ng katawan)</li>
+						<input id="yes2" type="radio" name="choice2"> Yes
+						<input id="no2" type="radio" name="choice2"> No<br>
+					<li>Headache (sakit ng ulo)</li>
+						<input id="yes3" type="radio" name="choice3"> Yes
+						<input id="no3" type="radio" name="choice3"> No<br>
+					<li>Fever the past few days (lagnat sa nakalipas na araw)</li>
+						<input id="yes4" type="radio" name="choice4"> Yes
+						<input id="no4" type="radio" name="choice4"> No<br>
+					<li>Cough or colds (ubo o sipon)</li>
+						<input id="yes5" type="radio" name="choice5"> Yes
+						<input id="no5" type="radio" name="choice5"> No<br>
+					<li>Shortness of breath (hinahabol ang paghinga)</li>
+						<input id="yes6" type="radio" name="choice6"> Yes
+						<input id="no6" type="radio" name="choice6"> No<br>
+					<li>Diarrhea (pagtatae)</li>
+						<input id="yes7" type="radio" name="choice7"> Yes
+						<input id="no7" type="radio" name="choice7"> No<br>
+				</ol>
+			<li>Have ypu worked together or stayed in the same close environment of a confirmed COVID-19 case? (May nakasama ka  ba o nakatrabahong tao na kumpirmadong may COVID-19 o coronavirus?)</li>
+				<input id="yes8" type="radio" name="choice8"> Yes
+				<input id="no8" type="radio" name="choice8"> No<br>
+			<li>Have you had any contact with anyone with fever, cough, colds, and sore throat the past two weeks? (Mayroon ka bang nakasama na may lagnat, ubo, sipon o sakit sa lalamunan sa nakalipas na 2 linggo?)</li>
+				<input id="yes9" type="radio" name="choice9"> Yes
+				<input id="no9" type="radio" name="choice9"> No<br>
+			<li>Have you travelled outside the Philippines in the last 14 days? (Ikaw ba ay nagbiyahe sa labas ng Pilipinas sa nakalipas na 14 na araw?)</li>
+				<input id="yes10" type="radio" name="choice10"> Yes
+				<input id="no10" type="radio" name="choice10"> No<br>
+			<li>Have you travelled in any areas in NCR aside from your home?(Ikaw ba ay nagpunta sa ibang parte ng NCR o Metro Manila bukod sa iyong bahay?) Specify where if your answer is yes.(Sabihin kung saan kung ang sagot mo ay oo.)</li>
+				<input id="yes11" type="radio" name="choice11"> Yes
+				<input id="no11" type="radio" name="choice11"> No<br>
+				Where? <input id="where" type="text" name="where"> 
+			<li>I am a PWD</li>
+				<input id="yes12" type="radio" name="choice12"> Yes
+				<input id="no12" type="radio" name="choice12"> No<br>
+			<li>I am pregnant</li>
+				<input id="yes13" type="radio" name="choice13"> Yes
+				<input id="no13" type="radio" name="choice13"> No<br>
+		</ol>
+		<br><br><br>
+		<input id="agree" type="checkbox" name="agree"> I hereby authorize KDR Adventure camp to collect and process the data indicated in survey for the purpose of effecting control of the COVID-19 infection. I understand that my personal information is protected by RA 10173, Data Privacy Act of 2012, that I am required by RA 11469, Bayanihan to Heal As One Act, to provide truthful information and that this health declaration is in accordance with memoranda issued by various government institutions, including the Joint Memorandum Circular No. 20-04-A Series 2020 by the Department of Trade and Industry and the Department of Labor and Employment, Memorandum Circular No. 2020-004 bt the Department of Tourism, and Memorandum Circular No. 2020-077 bt the Department of Interior and Local Government.<br><br>	
+			<button id="submitBtn" type="submit" onclick="passAgain();">SUBMIT</button>
+			<script type="text/javascript">
+				var print = document.getElementById("result").innerHTML = localStorage.getItem("textvalue");
+
+				function passAgain(){
+					var users = document.getElementById('username').value;
+					localStorage.setItem("textvalue", users);
+					return false;
+				}
+			</script>
+		</form>
+
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,264 @@
+body{
+	background: linear-gradient(to bottom right, #52b2c9 29%, #610c92 85%);
+	background-attachment: fixed;
+	margin-top: 30px;
+}
+header{
+	background-color: #000000;
+	border: 2px solid #000000;
+	border-top-left-radius: 40px;
+	border-top-right-radius: 40px;
+	height: 80px;
+	width: 60%;
+	margin: auto;
+	padding: 10px;
+}
+header .title{
+	text-align: center;
+  	font-family: Century Gothic;
+  	font-size: 43px;
+  	color: #FFFFFF;
+}
+
+
+.container{
+	background-color: #FFFFFF;
+	border: 2px solid #FFFFFF;
+	height: 740px;
+	width: 60%;
+	margin: auto;
+  	padding: 10px;
+  	padding-top: 40px;
+  	border-bottom-right-radius: 40px;
+  	border-bottom-left-radius: 40px;
+}
+
+.first-row {  
+	display: flex;
+  	flex-flow: row wrap;
+ 	align-items: center;
+ 	font-family: Century Gothic;
+ 	font-size: 17px;
+ 	padding-bottom: 15px;
+ 	padding-left: 20px;
+}
+.first-row input {
+	vertical-align: middle;
+	margin: 5px 17px 5px 0;
+	padding: 10px;
+	border: 1px solid #ddd;
+	width: 16em;
+}
+
+.second-row {  
+	font-family: Century Gothic;
+ 	font-size: 17px;
+ 	padding-left: 20px;
+}
+
+.second-row input {
+	margin: 5px 10px 5px 0;
+	padding: 10px;
+	border: 1px solid #ddd;
+	width: 58em;
+	height: 3em;
+}
+
+.third-row {  
+	display: flex;
+  	flex-flow: row wrap;
+ 	align-items: center;
+ 	font-family: Century Gothic;
+ 	font-size: 17px;
+ 	padding-left: 20px;
+}
+
+.third-row select {
+	vertical-align: middle;
+	margin: 5px 13px 5px 0;
+	padding: 10px;
+	border: 1px solid #ddd;
+	width: 14.5em;
+}
+
+
+.fourth-row {  
+	display: flex;
+  	flex-flow: row wrap;
+ 	align-items: center;
+ 	font-family: Century Gothic;
+ 	font-size: 17px;
+ 	padding-left: 20px;
+}
+
+.fourth-row input {
+	vertical-align: middle;
+	margin: 5px 130px 5px 0;
+	padding: 10px;
+	border: 1px solid #ddd;
+	width: 15em;
+}
+
+.fifth-row {  
+	display: flex;
+  	flex-flow: row wrap;
+ 	align-items: center;
+ 	font-family: Century Gothic;
+ 	font-size: 17px;
+ 	padding-left: 20px;
+}
+
+.fifth-row input {
+	vertical-align: middle;
+	margin: 5px 120px 5px 0;
+	padding: 10px;
+	border: 1px solid #ddd;
+	width: 25em;
+}
+
+.select-gender{
+	font-family: Century Gothic;
+ 	font-size: 17px;
+ 	padding-left: 20px;
+}
+
+.select-gender input {
+	margin: 5px 10px 5px 0;
+	padding: 10px;
+	border: 1px solid #ddd;
+	width: 3em;
+}
+
+.sixth-row {  
+	display: flex;
+  	flex-flow: row wrap;
+ 	align-items: center;
+ 	font-family: Century Gothic;
+ 	font-size: 17px;
+ 	padding-left: 20px;
+}
+
+.sixth-row input {
+	vertical-align: middle;
+	margin: 5px 50px 5px 0;
+	padding: 10px;
+	border: 1px solid #ddd;
+	width: 25em;
+}
+
+.seventh-row {  
+	display: flex;
+  	flex-flow: row wrap;
+ 	align-items: center;
+ 	font-family: Century Gothic;
+ 	font-size: 17px;
+ 	padding-left: 20px;
+}
+
+.seventh-row input {
+	vertical-align: middle;
+	margin: 5px 62px 5px 0;
+	padding: 10px;
+	border: 1px solid #ddd;
+	width: 25em;
+}
+
+.seventh-row select {
+	vertical-align: middle;
+	margin: 5px 10px 5px 22px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	width: 27em;
+}
+
+.eighth-row {  
+	display: flex;
+  	flex-flow: row wrap;
+ 	align-items: center;
+ 	font-family: Century Gothic;
+ 	font-size: 17px;
+ 	padding-left: 20px;
+}
+
+.eighth-row input {
+	vertical-align: middle;
+	margin: 5px 120px 5px 0;
+	padding: 10px;
+	border: 1px solid #ddd;
+	width: 57em;
+}
+
+.ninth-row {  
+	display: flex;
+  	flex-flow: row wrap;
+ 	align-items: center;
+ 	font-family: Century Gothic;
+ 	font-size: 17px;
+ 	padding-left: 20px;
+}
+
+.ninth-row select {
+	vertical-align: middle;
+	margin: 5px 120px 5px 36px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	width: 59em;
+}
+
+
+.tenth-row {  
+	display: flex;
+  	flex-flow: row wrap;
+ 	align-items: center;
+ 	font-family: Century Gothic;
+ 	font-size: 17px;
+ 	padding-left: 20px;
+}
+
+.tenth-row input {
+	vertical-align: middle;
+	margin: 5px 120px 10px 25px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	width: 57em;
+}
+
+.eleventh-row {  
+	display: flex;
+  	flex-flow: row wrap;
+ 	align-items: center;
+ 	font-family: Century Gothic;
+ 	font-size: 17px;
+ 	padding-left: 20px;
+}
+
+.eleventh-row select {
+	vertical-align: middle;
+	margin: 5px 120px 5px 63px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	width: 59em;
+}
+
+button {
+	background: linear-gradient(to bottom right, #52b2c9 29%, #610c92 85%);
+	border: none;
+	outline: none;
+  	border-radius: 25px;
+  	color: white;
+  	padding: 20px 30px;
+  	text-align: center;
+  	text-decoration: none;
+  	font-family: Century Gothic;
+  	font-size: 25px;
+  	margin: 45px 80px;
+  	width: 40em;
+}
+
+button:hover{
+	background: #C0C0C0;
+}
+
+button:active{
+	background: #808080;
+}
